@@ -9,7 +9,7 @@ title Hotspot Status : Stopped
 color 17
 cls
 echo __________________________________________________________________________________________________________________________________
-echo.                                                 He2A WiFi Hotspot Script for Retards
+echo.                                                   WiFi Hotspot Creation Wizard
 echo __________________________________________________________________________________________________________________________________
 set INP=
 echo Select your option:
@@ -60,7 +60,7 @@ if "%PWD:~7,1%"=="" ( goto erpwdcon_ )
 
 cls
 echo __________________________________________________________________________________________________________________________________
-echo.                                                 He2A WiFi Hotspot Script for Retards
+echo.                                                   WiFi Hotspot Creation Wizard
 echo __________________________________________________________________________________________________________________________________
 netsh wlan set hostednetwork mode=allow ssid="%WIF%" key="%PWD%"
 netsh wlan start hostednetwork
@@ -77,7 +77,7 @@ goto bgcon_
 :stcon_
 cls
 echo __________________________________________________________________________________________________________________________________
-echo.                                                 He2A WiFi Hotspot Script for Retards
+echo.                                                   WiFi Hotspot Creation Wizard
 echo __________________________________________________________________________________________________________________________________
 netsh wlan start hostednetwork
 color 2A
@@ -91,7 +91,7 @@ color 4C
 
 cls
 echo __________________________________________________________________________________________________________________________________
-echo.                                                 He2A WiFi Hotspot Script for Retards
+echo.                                                   WiFi Hotspot Creation Wizard
 echo __________________________________________________________________________________________________________________________________
 if "%PWD%" == "" ( echo You must enter a password. ) else ( echo Password must be of 8 characters or longer. )
 timeout /t 5 > nul
@@ -104,7 +104,7 @@ goto secon_
 :decon_
 cls
 echo __________________________________________________________________________________________________________________________________
-echo.                                                 He2A WiFi Hotspot Script for Retards
+echo.                                                   WiFi Hotspot Creation Wizard
 echo __________________________________________________________________________________________________________________________________
 netsh wlan stop hostednetwork
 color 2A
@@ -117,7 +117,7 @@ goto bgcon_
 color 4C
 cls
 echo __________________________________________________________________________________________________________________________________
-echo.                                                 He2A WiFi Hotspot Script for Retards
+echo.                                                   WiFi Hotspot Creation Wizard
 echo __________________________________________________________________________________________________________________________________
 netsh wlan show hostednetwork setting=security
 
@@ -127,7 +127,7 @@ goto bgcon_
 :tmcon_
 cls
 echo __________________________________________________________________________________________________________________________________
-echo.                                                 He2A WiFi Hotspot Script for Retards
+echo.                                                   WiFi Hotspot Creation Wizard
 echo __________________________________________________________________________________________________________________________________
 set /a ssid_tmp=%RANDOM%
 set /a key_tmp=%RANDOM%
@@ -141,7 +141,7 @@ goto bgcon_
 :incon_
 cls
 echo __________________________________________________________________________________________________________________________________
-echo.                                                 He2A WiFi Hotspot Script for Retards
+echo.                                                   WiFi Hotspot Creation Wizard
 echo __________________________________________________________________________________________________________________________________
 netsh wlan show hostednetwork
 echo.
@@ -161,7 +161,7 @@ title Hotspot Status : Display Loop (To stop the script, close the window or pre
 :lpcon2_
 cls
 echo __________________________________________________________________________________________________________________________________
-echo.                                                 He2A WiFi Hotspot Script for Retards
+echo.                                                   WiFi Hotspot Creation Wizard
 echo __________________________________________________________________________________________________________________________________
 color 2A
 netsh wlan show hostednetwork
@@ -174,7 +174,7 @@ goto lpcon2_
 color 4C
 title Hotspot Status : Insufficient Permission
 echo __________________________________________________________________________________________________________________________________
-echo.                                                 He2A WiFi Hotspot Script for Retards
+echo.                                                   WiFi Hotspot Creation Wizard
 echo __________________________________________________________________________________________________________________________________
 echo You need administrator rights to run this script properly.
 echo Press any key to quit.
